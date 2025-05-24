@@ -58,7 +58,7 @@ ecommerce-app/
 
 ### 1. Clone the Repository
 
-git clone https://github.com/yourusername/buybliss-ecommerce.git
+git clone https://github.com/MitiPatel205/E-commerce.git
 cd ecommerce-app
 
 ---
