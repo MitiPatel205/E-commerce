@@ -3,25 +3,6 @@ import { Link } from "react-router-dom";
 import heroVideo from "../assets/images/2675511-hd_1920_1080_24fps.mp4";
 import dealOfTheDayImg from "../assets/images/deal of the day.jpg";
 
-// Example product categories (you can replace with dynamic data)
-const [testimonials, setTestimonials] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/api/testimonials")
-      .then(res => res.json())
-      .then(data => setTestimonials(data))
-      .catch(err => console.error("Failed to fetch testimonials:", err));
-  }, []);
-const [featuredProducts, setFeaturedProducts] = useState([]);
-
-useEffect(() => {
-  fetch("http://localhost:5000/api/products") // Change if your backend runs on a different port
-    .then(res => res.json())
-    .then(data => setFeaturedProducts(data))
-    .catch(err => console.error("Failed to fetch products:", err));
-}, []);
-
-
 const brands = [
   "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
   "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg",
@@ -31,10 +12,71 @@ const brands = [
   "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg",
 ];
 
-
+// Example categories
+const categories = [
+  { name: "Electronics", icon: "bi-phone", desc: "Latest gadgets", link: "/products/electronics" },
+  { name: "Fashion", icon: "bi-bag", desc: "Trendy styles", link: "/products/fashion" },
+  { name: "Home", icon: "bi-house", desc: "Essentials & decor", link: "/products/home" },
+  { name: "Sports", icon: "bi-bicycle", desc: "Gear & equipment", link: "/products/sports" }, // <-- Changed here
+];
+const testimonialsMock = [
+  {
+    name: "Amit Sharma",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    quote: "BuyBliss made my shopping experience so easy and fun! Fast delivery and great prices."
+  },
+  {
+    name: "Priya Singh",
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+    quote: "The customer support is amazing. I love the variety of products available!"
+  },
+  {
+    name: "Rahul Verma",
+    avatar: "https://randomuser.me/api/portraits/men/65.jpg",
+    quote: "I always find the best deals here. Highly recommended to everyone!"
+  }
+];
 
 function Home() {
+   const [testimonials] = useState(testimonialsMock);
+  // Place this inside your Home component, before the return statement
+const [featuredProducts, setFeaturedProducts] = useState([
+  {
+    id: 1,
+    name: "Wireless Headphones",
+    price: "₹2,999",
+    img: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+    desc: "High-quality wireless headphones with noise cancellation.",
+    badge: "Best Seller"
+  },
+  {
+    id: 2,
+    name: "Smart Watch",
+    price: "₹4,999",
+    img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=80",
+    desc: "Track your fitness and notifications on the go.",
+    badge: "Deal"
+  },
+  {
+    id: 3,
+    name: "Bluetooth Speaker",
+    price: "₹1,499",
+    img: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    desc: "Portable speaker with powerful bass.",
+    badge: "New"
+  },
+  {
+    id: 4,
+    name: "DSLR Camera",
+    price: "₹29,999",
+    img: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+    desc: "Capture stunning photos with this DSLR.",
+    badge: "Featured"
+  }
+]);
+
   
+
   return (
     <div className="container">
 

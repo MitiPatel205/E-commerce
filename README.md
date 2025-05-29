@@ -1,10 +1,9 @@
 # BuyBliss E-Commerce App
-
 BuyBliss is a modern e-commerce web application featuring a React frontend and a Node.js/Express backend with MongoDB.  
 It supports dynamic product listings, customer testimonials, category browsing, newsletter signup, and more.
 
 ---
-
+![BuyBliss Screenshot](frontend/src/assets/images/buybliss.png)
 ## 🚀 Features
 
 - Modern UI with React and Bootstrap
@@ -58,7 +57,7 @@ ecommerce-app/
 
 ### 1. Clone the Repository
 
-git clone https://github.com/MitiPatel205/E-commerce.git
+git clone https://github.com/MitiPatel205/buybliss-ecommerce.git
 cd ecommerce-app
 
 ---
