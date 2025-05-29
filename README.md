@@ -1,12 +1,9 @@
 # BuyBliss E-Commerce App
-
-![BuyBliss Screenshot](frontend/src/assets/images/buybliss.png)
-
 BuyBliss is a modern e-commerce web application featuring a React frontend and a Node.js/Express backend with MongoDB.  
 It supports dynamic product listings, customer testimonials, category browsing, newsletter signup, and more.
 
 ---
-
+![BuyBliss Screenshot](frontend/src/assets/images/buybliss.png)
 ## 🚀 Features
 
 - Modern UI with React and Bootstrap
